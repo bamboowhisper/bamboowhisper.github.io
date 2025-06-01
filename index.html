@@ -17,18 +17,38 @@
       overflow-x: hidden;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1642414437806-6fd4fb9cfced?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
-      color: white;
       text-align: center;
       padding: 5rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    header video {
+      width: 100%;
+      z-index: -1;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #hero {
+      width: fit-content;
+      block-size: fit-content;
+      padding: 20px 40px;
+      background: rgba(255, 255, 255, .8);
+      color: black;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
     }
     header h1 {
       font-size: 3rem;
+      margin-top: 1rem;
       margin-bottom: 1rem;
     }
-    header p {
+    header h2 {
       font-size: 1.25rem;
-      max-width: 600px;
       margin: 0 auto 2rem;
     }
     .cta-btn {
@@ -37,6 +57,8 @@
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
       border: none;
+      max-width: 200px;
+      margin: 0 auto;
       border-radius: 8px;
       cursor: pointer;
       transition: background 0.3s ease;
@@ -50,7 +72,14 @@
       margin: 0 auto;
       text-align: center;
     }
-    section h2 {
+    .services {
+      display: flex;
+      gap: 20px;
+    }
+    .card {
+      text-align: left;
+    }
+    section h3 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
@@ -77,6 +106,11 @@
       font-size: 0.9rem;
       color: #888;
     }
+    @media only screen and (max-width: 700px) {
+      header video {
+        transform: translate(-50%, -50%) scale(2);
+      }
+    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
   <!-- Google tag (gtag.js) -->
@@ -102,23 +136,33 @@
 </head>
 <body>
   <header>
-    <h1>Bamboo Whisper</h1>
-    <p>Experience the real China with custom itineraries, local guides, and hidden gems designed just for you.</p>
-    <a href="#form" class="cta-btn">Plan Your Trip Now</a>
+    <video src="assets/intro.mp4" loop autoplay muted></video>
+    <div id="hero">
+      <h1>Bamboo Whisper</h1>
+      <h2>Where most tours stop, we begin</h2>
+      <a href="#form" class="cta-btn">Plan Your Trip Now</a>
+    </div>
   </header>
   <section>
-    <h2>Why Travel With Us?</h2>
-    <p>
-      We specialize in personalized travel experiences across China — from the Great Wall to remote villages,
-      authentic food tours to unique festivals. Every itinerary is crafted with local insight and your interests in mind.
-    </p>
-  </section>
-  <section>
-    <h2>Local, Authentic, Stress-Free</h2>
-    <p>
-      Forget cookie-cutter tours. Our local experts help you dive into China’s culture, history, and landscapes
-      at your own pace. Travel confidently knowing everything is taken care of.
-    </p>
+    <h3>What we can help you with?</h2>
+    <div class="services">
+      <div class="card">
+        <h4>🌏 Personalized Trip Planning</h3>
+        <p>We design custom itineraries based on your interests, time, and budget — no generic tours, just experiences that matter to you.</p>
+      </div>
+      <div class="card">
+        <h4>🗣️ Language & Cultural Support</h3>
+        <p>From booking trains to ordering local food, we help you understand what’s happening and say what you need without speaking Chinese.</p>
+      </div>
+      <div class="card">
+        <h4>📱 Must-Have Apps, Made Easy</h3>
+        <p>We walk you through essential Chinese apps like WeChat, Alipay, and navigation tools so you can travel smart and stress-free.</p>
+      </div>
+      <div class="card">
+        <h4>📍 Destination Guides</h3>
+        <p>Explore major cities and hidden gems with our detailed, foreigner-friendly guides: what to see, eat, avoid, and how to get around.</p>
+      </div>
+    </div>
   </section>
   <section>
     <iframe id="form" data-tally-src="https://tally.so/embed/wkpxB6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="578" frameborder="0" marginheight="0" marginwidth="0" title="Landing Form_External"></iframe>
