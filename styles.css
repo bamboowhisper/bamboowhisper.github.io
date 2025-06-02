@@ -120,6 +120,132 @@ q {
     display: block;
 }
 
+.grid {
+    display: grid;
+  }
+  .grid .row:last-child {
+    border: 0;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .row > div {
+    flex: 1;
+  }
+
+  .city-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .highlight {
+    background: #e1f5e2;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .section-description {
+    text-align: center;
+    margin: 2rem auto 1rem;
+    max-width: 700px;
+  }
+
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  >
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-family: 'Inter', 'Noto Sans', sans-serif;
+    background-color: #fdfdfc;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .comparison-table caption {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    color: #2c2c2c;
+    background-color: #f4f4f2;
+  }
+
+  .comparison-table thead {
+    background-color: #e8f5e9; /* soft green tint */
+    color: #1b1b1b;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1.2rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .comparison-table th[scope="row"] {
+    background-color: #fafafa;
+    font-weight: 500;
+    width: 40%;
+  }
+
+  .comparison-table ul {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  .comparison-table ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .comparison-table thead {
+      display: none;
+    }
+
+    .comparison-table,
+    .comparison-table tbody,
+    .comparison-table tr,
+    .comparison-table th,
+    .comparison-table td {
+      display: block;
+      width: 100%;
+    }
+
+    .comparison-table tr {
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #d0d0d0;
+      padding-bottom: 1rem;
+    }
+
+    .comparison-table th[scope="row"] {
+      background-color: transparent;
+      font-weight: bold;
+      border: none;
+    }
+
+    .comparison-table td::before {
+      content: "With BambooWhisper";
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #4c7849;
+    }
+  }
+
 footer {
     text-align: center;
     padding: 2rem 1rem;
