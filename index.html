@@ -7,117 +7,8 @@
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website" />
   <title>China Travel Planner - Tailored Local Experiences</title>
+  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
-      overflow-x: hidden;
-    }
-    header {
-      text-align: center;
-      padding: 5rem 1rem;
-      position: relative;
-      overflow: hidden;
-    }
-    header video {
-      width: 100%;
-      z-index: -1;
-      height: auto;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-    #hero {
-      width: fit-content;
-      block-size: fit-content;
-      padding: 20px 40px;
-      background: rgba(255, 255, 255, .8);
-      color: black;
-      border-radius: 20px;
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-    header h2 {
-      font-size: 1.25rem;
-      margin: 0 auto 2rem;
-    }
-    .cta-btn {
-      background-color: #95A83F;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      max-width: 200px;
-      margin: 0 auto;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .cta-btn:hover {
-      background-color: #40482E;
-    }
-    section {
-      padding: 2rem;
-      max-width: 950px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .services {
-      display: flex;
-      gap: 20px;
-    }
-    .card {
-      text-align: left;
-    }
-    section h3 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    section p {
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    img {
-      width: 100%;
-      height: auto;
-    }
-    h2, h3, h4 {
-      color: #40482e;
-    }
-    #closing {
-      background: url('https://images.unsplash.com/photo-1710141943622-02667d7d4f92?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-      background-size: cover;
-      width: 100%;
-      height: 500px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background-color: #fafafa;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    @media only screen and (max-width: 700px) {
-      header video {
-        transform: translate(-50%, -50%) scale(2.2);
-      }
-      .services {
-        flex-direction: column;
-      }
-    }
-  </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
   <!-- Google tag (gtag.js) -->
   <script type="text/plain" data-category="analytics" data-service="Google Analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-3S2CX3SJDG"></script>
@@ -125,7 +16,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-3S2CX3SJDG');
   </script>
   <!-- Hotjar Tracking Code for https://bamboowhispertravel.com/ -->
@@ -142,11 +32,12 @@
 </head>
 <body>
   <header>
+    <img id="logo" src="assets/logo.jpg" />
+    <h1 hidden>BambooWhisper</h1>
     <video src="assets/intro.mp4" loop autoplay muted></video>
     <div id="hero">
-      <h1>Bamboo Whisper</h1>
       <h2>Where most tours stop, we begin</h2>
-      <a href="#form" class="cta-btn">Plan Your Trip Now</a>
+      <a href="plan-your-trip/" class="cta-btn">Plan Your Trip Now</a>
     </div>
   </header>
   <section>
@@ -171,8 +62,72 @@
     </div>
   </section>
   <section>
-    <iframe id="form" data-tally-src="https://tally.so/embed/wkpxB6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="578" frameborder="0" marginheight="0" marginwidth="0" title="Landing Form_External"></iframe>
-    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+    <h3>Why BambooWhisper?</h3>
+    <table>
+      <caption>
+        IA comparison 2025
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Others (AI / Online Forums)</th>
+          <th scope="col">With BambooWhisper</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Generic info and destination you can Google</th>
+          <td>Advice from locals who grow up in China</td>
+        </tr>
+        <tr>
+          <th scope="row">AI can’t answer in real time</th>
+          <td>
+            <ul>
+              <li>AI gives generic suggestions. We tailor your trip like someone who actually knows the place.</li>
+              <li>AI tools aren’t built for real people or real travel in China. We are.</li>
+              <li>AI can't tailor your trip to you — we do, with on-the-ground knowledge and context.</li>
+              <li>ChatGPT isn’t available in China, and neither are most of its suggestions. We give you what actually works.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Too many options, no clarity</th>
+          <td>A simple, personalized plan that fits you</td>
+        </tr>
+      </tbody>
+    </table>
+    <q>Everything felt effortless. I didn’t even realize how different China could be until I had someone local show me the ropes.</q> – Laura (Germany)
+  </section>
+  <section>
+    <h3>Beyond the cities you know</h3>
+    <div class="services">
+      <div class="card">
+        <h4>🏯 Beijing + Beyond</h4>
+        <p>🇨🇳 Beijing
+          Walk the Great Wall. See the Forbidden City.
+          A must for any first-timer.</p>
+        <p>🪨 Datong, Pingyao, or Hebei Villages
+          Explore Buddhist cave art, ancient merchant cities, or tranquil countryside just a few hours away.</p>
+      </div>
+      <div class="card">
+        <h4>🌆 Shanghai + Side Trips</h4>
+        <p>🇨🇳 Shanghai
+          Experience China’s modern pulse and colonial history.</p>
+        <p>🌊 Shaoxing, Tongli, or Moganshan
+          Step into slow life: canals, bamboo forests, and poetic mountain retreats.</p>
+      </div>
+      <div class="card">
+        <h4>🧄 Chongqing + Culture Trail</h4>
+        <p>🇨🇳 Chongqing
+          Hotpot, rivers, and a city built in 3D.</p>
+        <p>🏞️ Chengdu’s Dujiangyan, Anshun’s waterfall
+          Historic engineering, spicy food, and dramatic scenery await nearby.</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h3>Our Specialty</h3>
+    <p>We design routes that blend famous cities with places only locals know. You’ll see China’s world-class highlights — and step off the tourist track to find unforgettable stories, meals, and views that don’t show up in AI-generated plans or copy-pasted blogs.</p>
+    <a class="cta-btn" href="plan-your-trip/">See Sample Itineraries</a>
   </section>
   <div id="closing"></div>
   <footer>

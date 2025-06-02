@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Know Before You Go | BambooWhisper</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0 1rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 0;
+    }
+    h1, h2 {
+      font-weight: 600;
+    }
+    .section {
+      margin-bottom: 2.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .card-content {
+      margin-top: 0.5rem;
+      display: none;
+    }
+    .card.open .card-content {
+      display: block;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .cta {
+      background-color: #e0f3e4;
+      border-left: 5px solid #64b687;
+      padding: 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .cta a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      color: #2e7d5b;
+    }
+    .emoji {
+      margin-right: 0.5rem;
+    }
+  </style>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
+   <!-- Google tag (gtag.js) -->
+   <script type="text/plain" data-category="analytics" data-service="Google Analytics" async src="https://www.googletagmanager.com/gtag/js?id=G-3S2CX3SJDG"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+     gtag('config', 'G-3S2CX3SJDG');
+   </script>
+   <!-- Hotjar Tracking Code for https://bamboowhispertravel.com/ -->
+   <script>
+     (function(h,o,t,j,a,r){
+         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+         h._hjSettings={hjid:6407298,hjsv:6};
+         a=o.getElementsByTagName('head')[0];
+         r=o.createElement('script');r.async=1;
+         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+         a.appendChild(r);
+     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+   </script>
+</head>
+<body>
+  <div class="container">
+    <!-- Section 1: Intro -->
+    <div class="section">
+      <h1>What Google & ChatGPT Don’t Tell You</h1>
+      <p>First time in China? We’ve got you covered. From apps to etiquette, here's what travelers like you wish they knew — shared by Chinese who grow up there.</p>
+    </div>
+
+    <!-- Section 2: Core Topics -->
+    <div class="section">
+      <div class="card">
+        <h3 onclick="toggleCard(this)"><span class="emoji">📱</span><strong>Digital China</strong>: Your Phone is as important as your life</h3>
+        <div class="card-content">
+          <ul>
+            <li>Install WeChat, Alipay, and Amap (Gaode) before you go</li>
+            <li>Internet is controlled: Google, Instagram, WhatsApp, ChatGPT are blocked</li>
+            <li>VPN is optional but not always reliable (and illegal for locals)</li>
+            <li>You can pay with foreign cards in Alipay/WeChat — but set it up before you arrive</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 onclick="toggleCard(this)"><span class="emoji">🈚</span><strong>Language & Communication</strong></h3>
+        <div class="card-content">
+          <ul>
+            <li>Most people are not able to have a conversational level of English, especially in 2nd-tier cities</li>
+            <li>DeepSeek can be very helpful to understand anything</li>
+            <li>Restaurant menus often don’t have English or photos — ask us for food cheat sheets</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 onclick="toggleCard(this)"><span class="emoji">🧍</span><strong>Etiquette & Cultural Norms</strong></h3>
+        <div class="card-content">
+          <ul>
+            <li>Locals may speak directly or seem impatient — don’t take it personally</li>
+            <li>No tipping expected — but small thank yous (XieXie) go a long way</li>
+            <li>Toilets may not have paper — carry tissues and hand sanitizer</li>
+            <li>Squat toilets are expected — exercise your leg muscles before the trip!</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 onclick="toggleCard(this)"><span class="emoji">🍜</span><strong>Food & Eating Out</strong></h3>
+        <div class="card-content">
+          <ul>
+            <li>Vegan/vegetarian options exist but must be explicitly requested</li>
+            <li>Street food is safe in most major cities — trust the lines</li>
+            <li>Local flavors can be spicy, oily, or sour — we can help customize food stops for your taste</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 onclick="toggleCard(this)"><span class="emoji">🚇</span><strong>Getting Around</strong></h3>
+        <div class="card-content">
+          <ul>
+            <li>Public transit is fast but requires exact app usage</li>
+            <li>Booking trains/tickets can be tricky — we show you step by step</li>
+            <li>Avoid illegal taxis — use Didi or apps we recommend</li>
+            <li>Be cautious of common scams or tourist traps — we’ll point out what to avoid and where to go instead</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 onclick="toggleCard(this)"><span class="emoji">🧳</span><strong>Things We Wish You Knew</strong></h3>
+        <div class="card-content">
+          <ul>
+            <li>Chinese people are kind but not used to foreign travelers in smaller towns</li>
+            <li>Do everything faster and prepared — China is a fast-paced society</li>
+            <li>You might feel lost at times — and that’s okay. You’ll never be alone with us</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="section cta">
+      <p>Want a local plan built around you — apps, food, routes, and all?</p>
+      <a href="../plan-your-trip/">👉 See Our Service Packages</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleCard(header) {
+      const card = header.parentElement;
+      card.classList.toggle('open');
+    }
+  </script>
+  <script type="module" src="../cookieconsent-config.js"></script>
+</body>
+</html>
