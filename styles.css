@@ -46,7 +46,7 @@ header h1 {
 }
 
 header h2 {
-    font-size: 2.25rem;
+    font-size: 3rem;
     margin: 0 auto 2rem;
     color: white;
     text-shadow: 1px 3px 3px black;
@@ -163,86 +163,81 @@ q {
     }
   }
 
-  >
   .comparison-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 2rem 0;
     font-family: 'Inter', 'Noto Sans', sans-serif;
-    background-color: #fdfdfc;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
+    margin-top: 2rem;
   }
-
+  
   .comparison-table caption {
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 1rem;
-    color: #2c2c2c;
-    background-color: #f4f4f2;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 1rem;
   }
-
-  .comparison-table thead {
-    background-color: #e8f5e9; /* soft green tint */
-    color: #1b1b1b;
-  }
-
+  
   .comparison-table th,
   .comparison-table td {
-    padding: 1.2rem;
+    padding: 1rem;
     text-align: left;
     vertical-align: top;
     border-bottom: 1px solid #e0e0e0;
   }
-
-  .comparison-table th[scope="row"] {
-    background-color: #fafafa;
-    font-weight: 500;
-    width: 40%;
+  
+  .comparison-table thead th {
+    background-color: #f5f5f5;
+    font-weight: 600;
   }
-
-  .comparison-table ul {
-    padding-left: 1.2rem;
-    margin: 0;
-  }
-
-  .comparison-table ul li {
-    margin-bottom: 0.5rem;
-  }
-
+  
+  /* Mobile Layout */
   @media (max-width: 768px) {
+    .comparison-table {
+      border: none;
+    }
+  
     .comparison-table thead {
       display: none;
     }
-
-    .comparison-table,
-    .comparison-table tbody,
-    .comparison-table tr,
-    .comparison-table th,
-    .comparison-table td {
-      display: block;
-      width: 100%;
-    }
-
+  
     .comparison-table tr {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
       margin-bottom: 1.5rem;
-      border-bottom: 2px solid #d0d0d0;
-      padding-bottom: 1rem;
     }
-
+  
     .comparison-table th[scope="row"] {
-      background-color: transparent;
-      font-weight: bold;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding: 0;
+      background: none;
       border: none;
     }
-
+  
+    .comparison-table td {
+      background-color: #e8f5e9; /* soft green */
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+      color: #2c3e50;
+    }
+  
+    .comparison-table td ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+  
     .comparison-table td::before {
       content: "With BambooWhisper";
       font-weight: 600;
       display: block;
       margin-bottom: 0.5rem;
-      color: #4c7849;
+      color: #2b5d34;
     }
   }
 
