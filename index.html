@@ -48,9 +48,23 @@
     <img id="logo" src="assets/logo.jpg" />
     <h1 hidden>BambooWhisper</h1>
     <video src="assets/intro.mp4" loop autoplay muted></video>
+    <div class="navbar">
+      <div class="navbar-container">
+        <nav class="navbar-links" id="navLinks">
+          <a href="/">Home</a>
+          <a href="/trip-planning/">Trip Planning</a>
+          <a href="/travel-tips/">Travel Tips</a>
+          <a href="/faq/">FAQ</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+          ☰
+        </button>
+      </div>
+    </div>
     <div id="hero">
       <h2>Where most tours stop, we begin</h2>
-      <a href="plan-your-trip/" class="cta-btn">Plan Your Trip Now</a>
+      <a href="/trip-planning/" class="cta-btn">Plan Your Trip Now</a>
     </div>
   </header>
   <section>
@@ -101,7 +115,8 @@
               <li>AI gives generic suggestions. We tailor your trip like someone who actually knows the place.</li>
               <li>AI tools aren’t built for real people or real travel in China. We are.</li>
               <li>AI can't tailor your trip to you — we do, with on-the-ground knowledge and context.</li>
-              <li>ChatGPT isn’t available in China, and neither are most of its suggestions. We give you what actually works.</li>
+              <li>ChatGPT isn’t available in China, and neither are most of its suggestions. We give you what actually
+                works.</li>
             </ul>
           </td>
         </tr>
@@ -116,7 +131,8 @@
   </section>
   <section>
     <h3>Beyond the cities you know</h3>
-    <p class="section-description">Classic cities meet hidden gems. Discover how we build trips that combine world-famous sights with lesser-known places — just a short ride away.</p>
+    <p class="section-description">Classic cities meet hidden gems. Discover how we build trips that combine
+      world-famous sights with lesser-known places — just a short ride away.</p>
     <div class="grid">
       <div class="row">
         <div>
@@ -163,20 +179,27 @@
     <p>We design routes that blend famous cities with places only locals know. You’ll see China’s world-class highlights
       — and step off the tourist track to find unforgettable stories, meals, and views that don’t show up in
       AI-generated plans or copy-pasted blogs.</p>
-    <a class="cta-btn" href="plan-tips/">See Sample Itineraries</a>
+    <a class="cta-btn" href="travel-tips/">See Sample Itineraries</a>
   </section>
   <div id="closing"></div>
   <footer>
     <p>© 2025 BambooWhisper</p>
     <p><a href="mailto:hello@bamboowhisper.com">hello@bamboowhisper.com</a></p>
     <p>
-        <a href="#">IG</a> |
-        <a href="#">TikTok</a> |
-        <a href="#">WeChat</a>
+      <a href="https://www.instagram.com/bamboo.whisper/">IG</a> |
+      <a href="https://www.tiktok.com/@bamboowhispertravel?is_from_webapp=1&sender_device=pc">TikTok</a>
     </p>
     <p><a href="/terms/">Terms</a> | <a href="/privacy/">Privacy</a></p>
   </footer>
   <script type="module" src="cookieconsent-config.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 
 </html>

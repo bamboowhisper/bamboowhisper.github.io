@@ -87,6 +87,80 @@
             margin: 0 0.5rem;
             text-decoration: none;
         }
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar-logo a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .navbar-links a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .navbar-links a:hover {
+            color: #40916c;
+            /* soft green highlight */
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* === Mobile Styles === */
+        @media (max-width: 768px) {
+            .navbar-links {
+                position: absolute;
+                top: 64px;
+                right: 0;
+                background-color: #fff;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+                display: none;
+                border-top: 1px solid #eee;
+            }
+
+            .navbar-links a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .navbar-links.show {
+                display: flex;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
     <!-- Google tag (gtag.js) -->
@@ -122,6 +196,20 @@
 
 <body>
     <div class="container">
+        <div class="navbar">
+            <div class="navbar-container">
+              <nav class="navbar-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/trip-planning/">Trip Planning</a>
+                <a href="/travel-tips/">Travel Tips</a>
+                <a href="/faq/">FAQ</a>
+                <a href="/contact/">Contact</a>
+              </nav>
+              <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+                ☰
+              </button>
+            </div>
+          </div>
         <!-- Section 1: Intro -->
         <div class="section">
             <h1>What Google & ChatGPT Don’t Tell You</h1>
@@ -211,7 +299,7 @@
         <!-- CTA Section -->
         <div class="section cta">
             <p>Want a local plan built around you — apps, food, routes, and all?</p>
-            <a href="../plan-your-trip/">👉 See Our Service Packages</a>
+            <a href="../trip-planning/">👉 See Our Service Packages</a>
         </div>
     </div>
 
@@ -219,12 +307,11 @@
         <p>© 2025 BambooWhisper</p>
         <p><a href="mailto:hello@bamboowhisper.com">hello@bamboowhisper.com</a></p>
         <p>
-            <a href="#">IG</a> |
-            <a href="#">TikTok</a> |
-            <a href="#">WeChat</a>
+            <a href="https://www.instagram.com/bamboo.whisper/">IG</a> |
+            <a href="https://www.tiktok.com/@bamboowhispertravel?is_from_webapp=1&sender_device=pc">TikTok</a>
         </p>
-        <p><a href="/terms/">Terms</a> | <a href="/privacy/">Privacy</a></p>
-    </footer>
+        <p><a href="../terms/">Terms</a> | <a href="../privacy/">Privacy</a></p>
+      </footer>
 
     <script>
         function toggleCard(header) {
@@ -233,6 +320,14 @@
         }
     </script>
     <script type="module" src="../cookieconsent-config.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>
