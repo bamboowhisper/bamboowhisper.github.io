@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact us | Bamboo Whisper</title>
-    <style>
-        body {
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Get started | Bamboo Whisper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <style type="text/css">
+      html { margin: 0; }
+      body {
             line-height: 1.6;
-            margin: 40px;
+            margin: 0;
             font-family: 'Inter', sans-serif;
             background-color: #fdfdfd;
             color: #333;
             overflow-x: hidden;
         }
-        footer {
+      iframe { border: 0; height: 1500px; }
+      footer {
             background: #222;
             color: white;
             text-align: center;
@@ -76,7 +80,7 @@
             .navbar-links {
                 position: absolute;
                 top: 64px;
-                right: 0;
+                left: 0;
                 background-color: #fff;
                 width: 100%;
                 flex-direction: column;
@@ -100,7 +104,6 @@
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
     <!-- Google tag (gtag.js) -->
     <script type="text/plain" data-category="analytics" data-service="Google Analytics" async
@@ -132,9 +135,8 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="navbar">
         <div class="navbar-container">
           <nav class="navbar-links" id="navLinks">
@@ -149,25 +151,7 @@
           </button>
         </div>
       </div>
-    <iframe id="form"
-        data-tally-src="https://tally.so/embed/wkpxB6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-        loading="lazy" width="100%" height="578" frameborder="0" marginheight="0" marginwidth="0"
-        title="Landing Form_External"></iframe>
-    <script>
-        var d = document,
-            w = "https://tally.so/widgets/embed.js",
-            v = function () {
-                "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll(
-                    "iframe[data-tally-src]:not([src])").forEach((function (e) {
-                    e.src = e.dataset.tallySrc
-                }))
-            };
-        if ("undefined" != typeof Tally) v();
-        else if (d.querySelector('script[src="' + w + '"]') == null) {
-            var s = d.createElement("script");
-            s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s);
-        }
-    </script>
+    <iframe data-tally-src="https://tally.so/r/31gA64?transparentBackground=1" width="100%" height="100%" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" title="Get Started_External"></iframe>
     <footer>
         <p>© 2025 BambooWhisper</p>
         <p><a href="mailto:hello@bamboowhisper.com">hello@bamboowhisper.com</a></p>
@@ -186,6 +170,5 @@
             navLinks.classList.toggle('show');
         });
     </script>
-</body>
-
+  </body>
 </html>

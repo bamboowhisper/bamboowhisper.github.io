@@ -15,7 +15,7 @@ body {
 
 header {
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -69,10 +69,10 @@ header {
   .navbar-links {
     position: absolute;
     top: 64px;
-    right: 0;
+    left: 0;
     background-color: #fff;
     color: #40916c;
-    width: 100%;
+    width: calc(100% - 2rem);
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
@@ -88,7 +88,7 @@ header {
 
   .hamburger {
     display: block;
-    color: #40916c;
+    color: white;
   }
 
   .navbar-links.show {
@@ -104,6 +104,7 @@ header video {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  filter: contrast(.7);
 }
 
 #hero {
@@ -138,11 +139,23 @@ header h2 {
   margin: 0 auto;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
   transition: background 0.3s ease;
 }
 
 .cta-btn:hover {
   background-color: #40482E;
+}
+
+.cta-btn-secondary {
+  color: white;
+  font-size: .9rem;
+  border: 0;
+  background: #bbbbbb;
+  padding: 10px 20px;
+  text-decoration: underline;
+  width: fit-content;
+  margin: 50px auto 0 auto;
 }
 
 section {
@@ -162,7 +175,7 @@ section {
 }
 
 section h3 {
-  font-size: 2rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
 }
 
@@ -194,6 +207,7 @@ h4 {
 q {
   margin-top: 30px;
   display: block;
+  font-style: italic;
 }
 
 .grid {
@@ -236,86 +250,7 @@ q {
 
 @media (max-width: 768px) {
   .row {
-    flex-direction: column;
-  }
-}
-
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-family: 'Inter', 'Noto Sans', sans-serif;
-  margin-top: 2rem;
-}
-
-.comparison-table caption {
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-.comparison-table th,
-.comparison-table td {
-  padding: 1rem;
-  text-align: left;
-  vertical-align: top;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.comparison-table thead th {
-  background-color: #f5f5f5;
-  font-weight: 600;
-}
-
-/* Mobile Layout */
-@media (max-width: 768px) {
-  .comparison-table {
-    border: none;
-  }
-
-  .comparison-table thead {
-    display: none;
-  }
-
-  .comparison-table tr {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1.5rem;
-  }
-
-  .comparison-table th[scope="row"] {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    padding: 0;
-    background: none;
-    border: none;
-  }
-
-  .comparison-table td {
-    background-color: #e8f5e9;
-    /* soft green */
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 0.5rem;
-    color: #2c3e50;
-  }
-
-  .comparison-table td ul {
-    margin: 0;
-    padding-left: 1.2rem;
-  }
-
-  .comparison-table td::before {
-    content: "With BambooWhisper";
-    font-weight: 600;
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #2b5d34;
+    gap: 1rem;
   }
 }
 
