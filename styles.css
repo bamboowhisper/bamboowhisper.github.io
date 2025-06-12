@@ -15,7 +15,7 @@ body {
 
 header {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -101,10 +101,10 @@ header video {
   z-index: -1;
   height: auto;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
   filter: contrast(.7);
+  transform: scale(1.2);
 }
 
 #hero {
@@ -270,7 +270,9 @@ footer a {
 
 @media only screen and (max-width: 700px) {
   header video {
-    transform: translate(-50%, -50%) scale(2.2);
+    transform: translate(-50%, -50%) scale(4);
+    left: 50%;
+    top: 50%;
   }
 
   .services {
