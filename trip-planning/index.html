@@ -177,6 +177,36 @@
             cursor: pointer;
         }
 
+        .cta-btn {
+            background-color: #95A83F;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            max-width: 200px;
+            margin: 0 auto;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            }
+
+            .cta-btn:hover {
+            background-color: #40482E;
+            }
+
+        .cta-btn-secondary {
+            color: white;
+            font-size: .9rem;
+            border: 0;
+            background: #bbbbbb;
+            padding: 10px 20px;
+            text-decoration: underline;
+            width: fit-content;
+            margin: 50px auto 0 auto;
+            }
+
         /* === Mobile Styles === */
         @media (max-width: 768px) {
             .navbar-links {
@@ -306,28 +336,20 @@
                 <td>❌</td>
                 <td>✅ Full itinerary</td>
             </tr>
+            <tr>
+                <td><b>Pricing</b></td>
+                <td><b>49€<sup>*</sup></b></td>
+                <td><b>109€<sup>*</sup></b></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="text-align: center;"><a class="cta-btn" href="/get-started/?plan=smart">Get started</a></td>
+                <td style="text-align: center;"><a class="cta-btn" href="/get-started/?plan=discovery">Get started</a></td>
+            </tr>
+            <tr>
+                <td style="text-align: right" colspan="3"><small>* Displayed prices for a 7 days trip.</small></td>
+            </tr>
         </table>
-    </section>
-
-    <section>
-        <h2>💰 Pricing</h2>
-        <div class="pricing-cards">
-            <div class="card">
-                <h3>Up to 7 days</h3>
-                <p>Start Smart: €49<br>Full Discovery: €109</p>
-                <a class="btn" href="/get-started/">Get Started</a>
-            </div>
-            <div class="card">
-                <h3>8–14 days</h3>
-                <p>Start Smart: €59<br>Full Discovery: €149</p>
-                <a class="btn" href="/get-started/">Get Started</a>
-            </div>
-            <div class="card">
-                <h3>15+ days</h3>
-                <p>Start Smart: €69<br>Full Discovery: €189</p>
-                <a class="btn" href="/get-started/">Get Started</a>
-            </div>
-        </div>
     </section>
 
     <section class="how-it-works">
@@ -342,34 +364,8 @@
         </ol>
     </section>
 
-    <section>
-        <h2>📣 Why BambooWhisper?</h2>
-        <table class="comparison-table">
-            <tr>
-                <th>Others (AI / Forums)</th>
-                <th>With BambooWhisper</th>
-            </tr>
-            <tr>
-                <td>Generic info</td>
-                <td>Advice from locals</td>
-            </tr>
-            <tr>
-                <td>No real-time help</td>
-                <td>1:1 consultation</td>
-            </tr>
-            <tr>
-                <td>Too many options</td>
-                <td>Clear, custom plan</td>
-            </tr>
-            <tr>
-                <td>Blocked suggestions</td>
-                <td>China-verified info</td>
-            </tr>
-        </table>
-    </section>
-
     <section class="cta-section">
-        <a href="../contact">Still Have Questions? Contact Us</a>
+        <a class="cta-btn-secondary" href="/contact">Still Have Questions? Contact Us</a>
     </section>
 
     <footer>
@@ -379,7 +375,7 @@
             <a href="https://www.instagram.com/bamboo.whisper/">IG</a> |
             <a href="https://www.tiktok.com/@bamboowhispertravel?is_from_webapp=1&sender_device=pc">TikTok</a>
         </p>
-        <p><a href="../terms/">Terms</a> | <a href="../privacy/">Privacy</a></p>
+        <p><a href="/terms/">Terms</a> | <a href="/privacy/">Privacy</a></p>
       </footer>
     <script type="module" src="../cookieconsent-config.js"></script>
     <script>
