@@ -128,6 +128,42 @@ header h2 {
   color: white;
   text-shadow: 1px 3px 3px black;
 }
+@keyframes jumpInfinite {
+  0% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 20px;
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+.down-arrow {
+  position: absolute;
+  display: none;
+  bottom: calc(10vh - 90px);
+  left: calc(50% - 14px);
+  width: 0;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 2px;
+  color: white;
+  animation: jumpInfinite 1.5s infinite;
+}
+
+.down-arrow:after {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-radius: 4px;
+  transform: rotateZ(45deg);
+}
 
 .cta-btn {
   background-color: #95A83F;
@@ -155,7 +191,7 @@ header h2 {
   padding: 10px 20px;
   text-decoration: underline;
   width: fit-content;
-  margin: 50px auto 0 auto;
+  margin: 30px auto 15px auto;
 }
 
 section {
@@ -269,6 +305,9 @@ footer a {
 }
 
 @media only screen and (max-width: 700px) {
+  .down-arrow {
+    display: block;
+  }
   header video {
     transform: translate(-50%, -50%) scale(4);
     left: 50%;
